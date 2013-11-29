@@ -1,0 +1,17 @@
+{
+    "name": "pallo/lib-i18n",
+    "description": "Internationalization library of the Pallo framework",
+    "license": "MIT",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Joris Vandeweerd",
+            "email": "joris@statik.be"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "pallo\\library\\i18n\\": ["src/", "test/src/"]
+        }
+    }
+}
