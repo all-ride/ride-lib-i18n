@@ -134,11 +134,13 @@ class GenericLocaleManager implements LocaleManager {
             $locale = $this->getLocale($locale);
         }
 
-        $code = $locale->getCode();
+        $code = $locale->getProperty('full', $locale->getCode());
 
-        setlocale(LC_ALL, $code);
+        setlocale(LC_COLLATE, $code);
+        setlocale(LC_MONETARY, $code);
+        setlocale(LC_TIME, $code);
 
-        $this->locale = $code;
+        $this->locale = $locale->getCode();
     }
 
     /**
