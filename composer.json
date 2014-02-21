@@ -1,6 +1,6 @@
 {
-    "name": "pallo/lib-i18n",
-    "description": "Internationalization library of the Pallo framework",
+    "name": "ride/lib-i18n",
+    "description": "Internationalization library of the Ride framework",
     "license": "MIT",
     "version": "0.1.1",
     "authors": [
@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "pallo\\library\\i18n\\": ["src/", "test/src/"]
+            "ride\\library\\i18n\\": ["src/", "test/src/"]
         }
     }
 }
