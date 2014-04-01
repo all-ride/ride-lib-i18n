@@ -11,8 +11,8 @@ interface TranslatorManager {
 
     /**
      * Gets the translator for the provided locale
-     * @param ride\library\i18n\locale\Locale $locale
-     * @return ride\library\i18n\translator\Translator
+     * @param \ride\library\i18n\locale\Locale $locale
+     * @return \ride\library\i18n\translator\Translator
      */
     public function getTranslator(Locale $locale);
 

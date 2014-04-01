@@ -19,21 +19,21 @@ class I18n {
 
     /**
      * The manager of the locales
-     * @var ride\library\i18n\locale\LocaleManager
+     * @var \ride\library\i18n\locale\LocaleManager
      */
     protected $localeManager;
 
     /**
      * The manager of the translators
-     * @var ride\library\i18n\translator\TranslatorManager
+     * @var \ride\library\i18n\translator\TranslatorManager
      */
     protected $translatorManager;
 
     /**
      * Constructs a new internationalization facade
-     * @param ride\library\i18n\locale\LocaleManager $localeManager Manager
+     * @param \ride\library\i18n\locale\LocaleManager $localeManager Manager
      * of the locales
-     * @param ride\library\i18n\translator\TranslatorManager
+     * @param \ride\library\i18n\translator\TranslatorManager
      * $translatorManager Manager of the translators
      * @return null
      */
@@ -64,10 +64,10 @@ class I18n {
      * Gets the locale.
      *
      * @param string $code the locale code, if not specified then the current locale is assumed
-     * @return ride\library\i18n\locale\Locale
-     * @throws ride\library\i18n\exception\LocaleNotFoundException if the
+     * @return \ride\library\i18n\locale\Locale
+     * @throws \ride\library\i18n\exception\LocaleNotFoundException if the
      * locale with the specified code could not be found
-     * @throws ride\library\i18n\exception\I18nException when $code is not
+     * @throws \ride\library\i18n\exception\I18nException when $code is not
      * specified and no locales could be found
      */
     public function getLocale($code = null) {
@@ -115,10 +115,10 @@ class I18n {
 
     /**
      * Gets the translator for a locale
-     * @param null|string|ride\library\i18n\locale\Locale $locale locale code,
+     * @param null|string| \ride\library\i18n\locale\Locale $locale locale code,
      * a Locale instance or if not specified the current locale is assumed
-     * @return ride\library\i18n\translator\Translator
-     * @throws ride\library\i18n\exception\I18nException when the provided
+     * @return \ride\library\i18n\translator\Translator
+     * @throws \ride\library\i18n\exception\I18nException when the provided
      * locale is not available or when no locale is provided and there are no
      * locales available
      */

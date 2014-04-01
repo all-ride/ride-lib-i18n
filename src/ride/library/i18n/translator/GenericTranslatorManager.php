@@ -18,7 +18,7 @@ class GenericTranslatorManager implements TranslatorManager {
 
     /**
      * Constructs a new translation manager
-     * @param ride\library\i18n\translator\io\TranslationIO $io
+     * @param \ride\library\i18n\translator\io\TranslationIO $io
      * @return null
      */
     public function __construct(TranslationIO $io) {
@@ -28,8 +28,8 @@ class GenericTranslatorManager implements TranslatorManager {
 
     /**
      * Gets the translator for the provided locale
-     * @param ride\library\i18n\locale\Locale $locale
-     * @return ride\library\i18n\translator\Translator
+     * @param \ride\library\i18n\locale\Locale $locale
+     * @return \ride\library\i18n\translator\Translator
      */
     public function getTranslator(Locale $locale) {
         $localeCode = $locale->getCode();
@@ -43,7 +43,7 @@ class GenericTranslatorManager implements TranslatorManager {
 
     /**
      * Creates an instance of a translator
-     * @param ride\library\i18n\locale\Locale $locale
+     * @param \ride\library\i18n\locale\Locale $locale
      * @return \ride\library\i18n\translator\GenericTranslator
      */
     protected function createTranslator(Locale $locale) {
