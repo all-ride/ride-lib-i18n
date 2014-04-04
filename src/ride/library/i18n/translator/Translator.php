@@ -2,9 +2,6 @@
 
 namespace ride\library\i18n\translator;
 
-use ride\library\i18n\locale\Locale;
-use ride\library\i18n\translator\io\TranslationIO;
-
 /**
  * Translator of keys into localized translations
  */

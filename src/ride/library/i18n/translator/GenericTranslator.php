@@ -25,14 +25,14 @@ class GenericTranslator implements Translator {
 
     /**
      * Translation input/output implementation
-     * @var ride\library\translation\io\TranslationIO
+     * @var \ride\library\i18n\translator\io\TranslationIO
      */
     protected $io;
 
     /**
      * Constructs a new translator
-     * @param ride\library\i18n\locale\Locale $locale
-     * @param ride\library\i18n\translator\io\TranslationIO $io
+     * @param \ride\library\i18n\locale\Locale $locale
+     * @param \ride\library\i18n\translator\io\TranslationIO $io
      * @return null
      */
     public function __construct(Locale $locale, TranslationIO $io) {

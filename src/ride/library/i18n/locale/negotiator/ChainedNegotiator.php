@@ -36,9 +36,9 @@ class ChainedNegotiator implements Negotiator {
     /**
      * Determines which locale to use.
      *
-     * @param ride\library\i18n\locale\LocaleManager $manager Instance of the
+     * @param \ride\library\i18n\locale\LocaleManager $manager Instance of the
      * locale manager
-     * @return null|ride\library\i18n\locale\Locale the locale
+     * @return null| \ride\library\i18n\locale\Locale the locale
      */
     public function getLocale(LocaleManager $manager) {
        foreach ($this->negotiators as $negotiator) {

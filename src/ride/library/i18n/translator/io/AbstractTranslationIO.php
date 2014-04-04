@@ -46,7 +46,7 @@ abstract class AbstractTranslationIO implements TranslationIO {
      * @param string $localeCode The code of the locale
      * @return array Array with the translation key as key and the translation
      * as value
-     * @throws ride\library\i18n\exception\I18nException when the locale code
+     * @throws \ride\library\i18n\exception\I18nException when the locale code
      * is empty or invalid
      */
     public function getTranslations($localeCode) {
@@ -77,7 +77,7 @@ abstract class AbstractTranslationIO implements TranslationIO {
      * @param string $key Key of the translation
      * @param string $translation
      * @return null
-     * @throws ride\library\i18n\exception\I18nException when this
+     * @throws \ride\library\i18n\exception\I18nException when this
      * functionality is not supported
      */
     public function setTranslation($localeCode, $key, $translation = null) {
