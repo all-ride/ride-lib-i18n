@@ -26,21 +26,21 @@ class GenericLocaleManager implements LocaleManager {
 
     /**
      * Locale input/ouput implementation
-     * @var ride\library\i18n\locale\io\LocaleIO
+     * @var \ride\library\i18n\locale\io\LocaleIO
      */
     protected $io;
 
     /**
      * Negotiator to determine the current locale
-     * @var ride\library\i18n\locale\negotiator\Negotiator
+     * @var \ride\library\i18n\locale\negotiator\Negotiator
      */
     protected $negotiator;
 
     /**
      * Constructs a new generic locale manager
-     * @param ride\library\i18n\locale\io\LocaleIO $io Locale input/output
+     * @param \ride\library\i18n\locale\io\LocaleIO $io Locale input/output
      * implementation
-     * @param ride\library\i18n\locale\negotiator\Negotiator $negotiator
+     * @param \ride\library\i18n\locale\negotiator\Negotiator $negotiator
      * Negotiator to determine the current locale
      * @return null
      */
@@ -53,7 +53,7 @@ class GenericLocaleManager implements LocaleManager {
      * Checks if the provided locale is available
      * @param string $code Code of the locale
      * @return boolean
-     * @throws ride\library\i18n\exception\I18nException when an invalid code
+     * @throws \ride\library\i18n\exception\I18nException when an invalid code
      * is provided
      */
     public function hasLocale($code) {
@@ -79,10 +79,10 @@ class GenericLocaleManager implements LocaleManager {
     /**
      * Gets a locale
      * @param string $code if not provided, the current locale will be returned
-     * @return ride\library\i18n\locale\Locale
-     * @throws ride\library\i18n\exception\I18nException when an invalid code
+     * @return \ride\library\i18n\locale\Locale
+     * @throws \ride\library\i18n\exception\I18nException when an invalid code
      * is provided
-     * @throws ride\library\i18n\exception\LocaleNotFoundException when the
+     * @throws \ride\library\i18n\exception\LocaleNotFoundException when the
      * locale is not available
      */
     public function getLocale($code = null) {
@@ -107,8 +107,8 @@ class GenericLocaleManager implements LocaleManager {
 
     /**
      * Gets the default locale.
-     * @return ride\library\i18n\locale\Locale the default locale
-     * @throws ride\library\i18n\exception\I18nException when there are no
+     * @return \ride\library\i18n\locale\Locale the default locale
+     * @throws \ride\library\i18n\exception\I18nException when there are no
      * locales available
      */
     public function getDefaultLocale() {
@@ -122,11 +122,11 @@ class GenericLocaleManager implements LocaleManager {
 
     /**
      * Sets the current locale
-     * @param string|ride\library\i18n\locale\Locale $locale
+     * @param string| \ride\library\i18n\locale\Locale $locale
      * @return null
-     * @throws ride\library\i18n\exception\I18nException when an invalid code
+     * @throws \ride\library\i18n\exception\I18nException when an invalid code
      * is provided
-     * @throws ride\library\i18n\exception\LocaleNotFoundException when the
+     * @throws \ride\library\i18n\exception\LocaleNotFoundException when the
      * locale is not available
      */
     public function setCurrentLocale($locale) {

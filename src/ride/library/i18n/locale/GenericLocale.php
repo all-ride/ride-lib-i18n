@@ -49,6 +49,14 @@ class GenericLocale implements Locale {
     }
 
     /**
+     * Gets a string representation of the locale
+     * @return string
+     */
+    public function __toString() {
+        return $this->code;
+    }
+
+    /**
      * Gets the code of this locale
      * @return string
      */
