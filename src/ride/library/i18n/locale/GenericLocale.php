@@ -86,4 +86,12 @@ class GenericLocale implements Locale {
         return $this->properties[$key];
     }
 
+    /**
+     * Gets all the properties of the locale
+     * @return array
+     */
+    public function getProperties() {
+        return $this->properties;
+    }
+
 }

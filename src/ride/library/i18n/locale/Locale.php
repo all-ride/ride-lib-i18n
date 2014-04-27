@@ -27,4 +27,10 @@ interface Locale {
      */
     public function getProperty($key, $default = null);
 
+    /**
+     * Gets all the properties of the locale
+     * @return array
+     */
+    public function getProperties();
+
 }
