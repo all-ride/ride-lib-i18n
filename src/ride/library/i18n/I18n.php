@@ -43,6 +43,17 @@ class I18n {
     }
 
     /**
+     * Set the translator manager
+     * @param TranslatorManager $translatorManager
+     * @return I18n $this
+     */
+    public function setTranslatorManager(TranslatorManager $translatorManager) {
+        $this->translatorManager = $translatorManager;
+
+        return $this;
+    }
+
+    /**
      * Sets the current locale
      * @param string $code The code of the locale
      * @return null
