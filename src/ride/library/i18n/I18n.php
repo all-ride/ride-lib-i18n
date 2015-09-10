@@ -44,13 +44,12 @@ class I18n {
 
     /**
      * Set the translator manager
-     * @param TranslatorManager $translatorManager
-     * @return I18n $this
+     * @param \ride\library\i18n\translator\TranslatorManager
+     * $translatorManager Manager of the translators
+     * @return null
      */
     public function setTranslatorManager(TranslatorManager $translatorManager) {
         $this->translatorManager = $translatorManager;
-
-        return $this;
     }
 
     /**
