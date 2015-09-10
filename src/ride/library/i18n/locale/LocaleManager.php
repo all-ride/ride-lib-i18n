@@ -24,8 +24,9 @@ interface LocaleManager {
 
     /**
      * Gets a locale
-     * @param string $code if not provided, the current locale will be returned
-     * @return \ride\library\i18n\locale\Locale
+     * @param string $code Code of the locale. If not provided, the current
+     * locale will be returned
+     * @return \ride\library\i18n\locale\Locale Instance of the requested locale
      * @throws \ride\library\i18n\exception\I18nException when an invalid code
      * is provided
      * @throws \ride\library\i18n\exception\LocaleNotFoundException when the
@@ -35,7 +36,7 @@ interface LocaleManager {
 
     /**
      * Gets the default locale.
-     * @return \ride\library\i18n\locale\Locale the default locale
+     * @return \ride\library\i18n\locale\Locale Default locale
      * @throws \ride\library\i18n\exception\I18nException when there are no
      * locales available
      */
@@ -43,7 +44,8 @@ interface LocaleManager {
 
     /**
      * Sets the current locale
-     * @param string| \ride\library\i18n\locale\Locale $locale
+     * @param string|\ride\library\i18n\locale\Locale $locale Locale to set as
+     * current locale
      * @return null
      * @throws \ride\library\i18n\exception\I18nException when an invalid code
      * is provided

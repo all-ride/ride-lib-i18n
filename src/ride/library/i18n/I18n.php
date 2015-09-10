@@ -44,16 +44,17 @@ class I18n {
 
     /**
      * Sets the current locale
-     * @param string $code The code of the locale
+     * @param string|\ride\library\i18n\locale\Locale $locale Code or instance
+     * of the locale
      * @return null
      */
-    public function setCurrentLocale($code) {
-        $this->localeManager->setCurrentLocale($code);
+    public function setCurrentLocale($locale) {
+        $this->localeManager->setCurrentLocale($locale);
     }
 
     /**
      * Checks if the provided locale is available
-     * @param string $code The code of the locale
+     * @param string $code Code of the locale
      * @return boolean
      */
     public function hasLocale($code) {
@@ -115,7 +116,7 @@ class I18n {
 
     /**
      * Gets the translator for a locale
-     * @param null|string| \ride\library\i18n\locale\Locale $locale locale code,
+     * @param null|string|\ride\library\i18n\locale\Locale $locale locale code,
      * a Locale instance or if not specified the current locale is assumed
      * @return \ride\library\i18n\translator\Translator
      * @throws \ride\library\i18n\exception\I18nException when the provided
