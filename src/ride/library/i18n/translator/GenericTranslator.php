@@ -92,6 +92,10 @@ class GenericTranslator implements Translator {
 
         if ($vars) {
             foreach ($vars as $key => $value) {
+                if (!is_scalar($value)) {
+                    continue;
+                }
+
                 $translation = str_replace('%' . $key . '%', $value, $translation);
             }
         }
