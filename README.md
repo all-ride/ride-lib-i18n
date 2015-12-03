@@ -35,6 +35,13 @@ Check this code sample to see the possibilities of this library:
 ```php
 <?php
 
+use ride\library\i18n\locale\io\LocaleIO;
+use ride\library\i18n\locale\negotiator\DefaultNegotiator;
+use ride\library\i18n\locale\GenericLocaleManager;
+use ride\library\i18n\translator\io\AbstractTranslationIO;
+use ride\library\i18n\translator\GenericTranslatorManager;
+use ride\library\i18n\I18n;
+
 /**
  * Dummy implementation of a locale data source
  */
