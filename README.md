@@ -132,6 +132,13 @@ $translation = $translator->getTranslation('label.hello'); // Hello %name%!
 $translator->setTranslation('label.foo', 'bar');
 ```
 
+### Implementations
+
+For more examples, you can check the following implementations of this library:
+- [ride/app-i18n](https://github.com/all-ride/ride-app-i18n)
+- [ride/web-i18n](https://github.com/all-ride/ride-web-i18n)
+- [ride/wra-i18n](https://github.com/all-ride/ride-wra-i18n)
+
 ## Installation
 
 You can use [Composer](http://getcomposer.org) to install this library.
