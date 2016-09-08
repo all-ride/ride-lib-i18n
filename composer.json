@@ -10,7 +10,12 @@
     ],
     "autoload": {
         "psr-0": {
-            "ride\\library\\i18n\\": ["src/", "test/src/"]
+            "ride\\library\\i18n\\": ["src/"]
+        }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "ride\\library\\i18n\\": ["test/src/"]
         }
     }
 }
