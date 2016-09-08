@@ -2,10 +2,12 @@
 
 Internationalization library of the PHP Ride framework.
 
-## Locale
+## What's In This Library
+
+### Locale
 
 A _Locale_ is the interface for a locale definition.
-This is a simple representation with a name and code with extra properties.
+This is a simple representation with a name, code and extra properties.
 
 These locales are contained in a _LocaleManager_ instance.
 This manager controls the current and default locale.
@@ -14,9 +16,14 @@ A _LocaleIO_ feeds the _LocaleManager_ with locales.
 The locales should be sorted in the order of importance for the system.
 The first locale is considered the default locale.
 
-To detect the locale of the client, you can implement the _Negotiator_ interface.
+### Negotiator
 
-## Translator
+A _Negotiator_ is used to detect the current locale.
+It's invoked when the current locale is not set.
+
+You can use the _ChainedNegotiator_ to implement multiple detection mechanisms in a chain.
+
+### Translator
 
 A _Translator_ is the interface to translate keys into a localized string.
 The interface supports a difference between singular and plural forms of a translation key.
@@ -24,7 +31,7 @@ The interface supports a difference between singular and plural forms of a trans
 The translators are managed by a _TranslatorManager_.
 _Translator_ instances can be requested with the _Locale_ instance.
 
-## I18n
+### I18n
 
 The I18n class glues the different parts together into an easy facade. 
 
@@ -123,3 +130,13 @@ $value = $translator->translatePlural(3, 'label.item'); // We got 3 items.
 $translations = $translator->getTranslations(); // array('label.name' => 'Name', 'label.email' => 'E-mail address', ...)
 $translation = $translator->getTranslation('label.hello'); // Hello %name%!
 $translator->setTranslation('label.foo', 'bar');
+```
+
+## Installation
+
+You can use [Composer](http://getcomposer.org) to install this library.
+
+```
+composer require ride/lib-i18n
+```
+
