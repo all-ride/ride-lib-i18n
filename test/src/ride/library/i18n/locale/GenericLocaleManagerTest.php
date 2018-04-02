@@ -4,12 +4,19 @@ namespace ride\library\i18n\locale;
 
 use ride\library\i18n\locale\io\LocaleIOMock;
 
-use \PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class GenericLocaleManagerTest extends PHPUnit_Framework_TestCase {
+class GenericLocaleManagerTest extends TestCase {
 
     public function setUp() {
         $this->manager = new GenericLocaleManager(new LocaleIOMock());
+    }
+
+    /**
+     * @expectedException ride\library\i18n\exception\I18nException 
+     */
+    public function testSetOrderShouldThrowI18nException() {
+        $this->manager->setOrder(1000);
     }
 
     /**
@@ -100,7 +107,7 @@ class GenericLocaleManagerTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testGetLocaleReturnsInstanceOfLocale() {
-        $this->assertTrue($this->manager->getLocale('en') instanceof Locale);
+        $this->assertInstanceOf('ride\library\i18n\locale\Locale', $this->manager->getLocale('en'));
     }
 
     /**

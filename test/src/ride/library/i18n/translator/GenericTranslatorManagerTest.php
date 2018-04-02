@@ -6,9 +6,9 @@ use ride\library\i18n\locale\GenericLocale;
 use ride\library\i18n\translator\io\TranslationIOMock;
 use ride\library\i18n\translator\Translator;
 
-use \PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class GenericTranslatorManagerTest extends PHPUnit_Framework_TestCase {
+class GenericTranslatorManagerTest extends TestCase {
 
     public function setUp() {
         $this->englishLocale = new GenericLocale('en', 'English');

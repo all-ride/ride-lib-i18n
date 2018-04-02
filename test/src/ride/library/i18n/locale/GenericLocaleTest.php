@@ -2,9 +2,9 @@
 
 namespace ride\library\i18n\locale;
 
-use \PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class GenericLocaleTest extends PHPUnit_Framework_TestCase {
+class GenericLocaleTest extends TestCase {
 
     public function testConstruct() {
         $code = "code";
@@ -17,6 +17,24 @@ class GenericLocaleTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals('value', $locale->getProperty('key'));
         $this->assertEquals('default', $locale->getProperty('unset', 'default'));
         $this->assertNull($locale->getProperty('unset'));
+    }
+
+    public function testToString() {
+        $code = "code";
+        $name = "name";
+        $properties = array('key' => 'value');
+        $locale = new GenericLocale($code, $name, $properties);
+
+        $this->assertSame("code", (string) $locale);
+    }
+
+    public function testGetProperties() {
+        $code = "code";
+        $name = "name";
+        $properties = array('key' => 'value');
+        $locale = new GenericLocale($code, $name, $properties);
+
+        $this->assertSame(array('key' => 'value'), $locale->getProperties());
     }
 
     /**

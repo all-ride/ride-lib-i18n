@@ -5,9 +5,9 @@ namespace ride\library\i18n\translator;
 use ride\library\i18n\locale\GenericLocale;
 use ride\library\i18n\translator\io\TranslationIOMock;
 
-use \PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class GenericTranslatorTest extends PHPUnit_Framework_TestCase {
+class GenericTranslatorTest extends TestCase {
 
     public function setUp() {
         $this->englishLocale = new GenericLocale('en', 'English');
@@ -16,6 +16,13 @@ class GenericTranslatorTest extends PHPUnit_Framework_TestCase {
 
         $this->io = new TranslationIOMock();
         $this->translator = new GenericTranslator($this->englishLocale, $this->io);
+    }
+
+    /**
+     * @expectedException ride\library\i18n\exception\I18nException
+     */
+    public function testTranslatePluralShouldThrowI18nException() {
+        $this->translator->translatePlural(1, 'invalid_key');
     }
 
     public function testConstruct() {
