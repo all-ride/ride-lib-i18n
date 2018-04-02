@@ -9,9 +9,9 @@ use ride\library\i18n\translator\io\TranslationIOMock;
 use ride\library\i18n\translator\Translator;
 use ride\library\i18n\translator\GenericTranslatorManager;
 
-use \PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class I18nTest extends PHPUnit_Framework_TestCase {
+class I18nTest extends TestCase {
 
     private $i18n;
 
@@ -20,6 +20,12 @@ class I18nTest extends PHPUnit_Framework_TestCase {
         $translationIO = new TranslationIOMock();
 
         $this->i18n = new I18n(new GenericLocaleManager($localeIO), new GenericTranslatorManager($translationIO));
+    }
+
+    public function testSetTranslatorManager() {
+        $this->i18n->setTranslatorManager(new GenericTranslatorManager(new TranslationIOMock()));
+
+        $this->assertSame('nl', $this->i18n->getTranslator()->getLocale());
     }
 
     public function testGetLocales() {
