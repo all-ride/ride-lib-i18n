@@ -10,6 +10,8 @@ use ride\library\i18n\translator\io\TranslationIO;
  */
 class GenericTranslatorManager implements TranslatorManager {
 
+    protected  $io;
+    
     /**
      * Array with the loaded translators
      * @var array
